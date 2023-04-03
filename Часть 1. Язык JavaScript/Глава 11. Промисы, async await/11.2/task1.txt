@@ -1,0 +1,13 @@
+Что выведет код ниже?
+
+let promise = new Promise(function(resolve, reject) {
+  resolve(1);
+
+  setTimeout(() => resolve(2), 1000);
+});
+
+promise.then(alert);
+
+Код выведет: 1.
+Функция resolve/reject ожидает только один аргумент (или ни одного).
+Все дополнительные аргументы будут проигнорированы.
